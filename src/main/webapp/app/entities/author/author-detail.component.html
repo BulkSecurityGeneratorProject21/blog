@@ -1,0 +1,33 @@
+
+<div *ngIf="author">
+    <h2><span jhiTranslate="blogApp.author.detail.title">Author</span> {{author.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="blogApp.author.firstName">First Name</span></dt>
+        <dd>
+            <span>{{author.firstName}}</span>
+        </dd>
+        <dt><span jhiTranslate="blogApp.author.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{author.lastName}}</span>
+        </dd>
+        <dt><span jhiTranslate="blogApp.author.displayName">Display Name</span></dt>
+        <dd>
+            <span>{{author.displayName}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'author/'+ author.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

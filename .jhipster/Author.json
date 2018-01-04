@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "posts",
+            "otherEntityName": "post",
+            "otherEntityRelationshipName": "author"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "comments",
+            "otherEntityName": "comment",
+            "otherEntityRelationshipName": "author"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "displayName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180104155132",
+    "entityTableName": "author",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

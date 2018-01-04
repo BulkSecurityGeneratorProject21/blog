@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "author",
+            "otherEntityName": "author",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "body",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "created",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180104155133",
+    "entityTableName": "post",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}
